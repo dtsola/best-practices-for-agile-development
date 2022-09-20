@@ -9,6 +9,31 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>dtsola</id>
+            <name>dtsola</name>
+            <email>dtsola@163.com</email>
+            <roles>
+                <role>Architect</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>https://github.com/dtsola/best-practices-for-agile-development.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:dtsola/best-practices-for-agile-development.git</developerConnection>
+        <url>https://github.com/dtsola/best-practices-for-agile-development</url>
+    </scm>
+
     <artifactId>springboot-discovery-test-service-a</artifactId>
 
     <dependencies>
