@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "e96ff235-1cab-46a0-ac8e-10e60b5c0f72",
+		"name": "Agile Development Guide",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Gateway网关内省调用链路-local",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "n-d-version",
+						"value": "{\"springboot-discovery-test-service-a\":\"1.0\", \"springboot-discovery-test-service-b\":\"1.0\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-version-weight",
+						"value": "{\"springboot-discovery-test-service-a\":\"1.0=90;1.1=10\", \"springboot-discovery-test-service-b\":\"1.0=20;1.1=80\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-region",
+						"value": "{\"springboot-discovery-test-service-a\":\"local\", \"springboot-discovery-test-service-b\":\"dev\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-region-weight",
+						"value": "dev=99;qa=1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-address",
+						"value": "{\"springboot-discovery-test-service-a\":\"13001\", \"springboot-discovery-test-service-b\":\"14001\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-env",
+						"value": "common",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-id-blacklist",
+						"value": "{\"springboot-discovery-test-service-a\":\"20210601-222830-466-1840-750-979\", \"springboot-discovery-test-service-b\":\"20210601-222830-501-4332-921-141\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-address-blacklist",
+						"value": "3*2;4001",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "app-version",
+						"value": "1.0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "mobile",
+						"value": "13312345678",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "user",
+						"value": "zhangsan",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "location",
+						"value": "shanghai",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "user=zhangsan; Path=/; Domain=nepxion; Expires=Fri, 07 Oct 2050 15:00:00 GMT;",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "trace-id",
+						"value": "c0zs78kcze5z",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "span-id",
+						"value": "1589",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "a",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "b",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:15001/springboot-discovery-test-service-a/invoke/gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "15001",
+					"path": [
+						"springboot-discovery-test-service-a",
+						"invoke",
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway网关内省调用链路-k8s",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "n-d-version",
+						"value": "{\"springboot-discovery-test-service-a\":\"feature-1.1\", \"springboot-discovery-test-service-c\":\"feature-1.1\"}",
+						"type": "text"
+					},
+					{
+						"key": "n-d-version-weight",
+						"value": "{\"springboot-discovery-test-service-a\":\"1.0=90;1.1=10\", \"springboot-discovery-test-service-b\":\"1.0=20;1.1=80\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-region",
+						"value": "{\"springboot-discovery-test-service-a\":\"local\", \"springboot-discovery-test-service-b\":\"local\", \"springboot-discovery-test-service-c\":\"local\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-region-weight",
+						"value": "dev=99;qa=1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-address",
+						"value": "{\"springboot-discovery-test-service-a\":\"13001\", \"springboot-discovery-test-service-b\":\"14001\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-env",
+						"value": "common",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-id-blacklist",
+						"value": "{\"springboot-discovery-test-service-a\":\"20210601-222830-466-1840-750-979\", \"springboot-discovery-test-service-b\":\"20210601-222830-501-4332-921-141\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-address-blacklist",
+						"value": "3*2;4001",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "app-version",
+						"value": "1.0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "mobile",
+						"value": "13312345678",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "user",
+						"value": "zhangsan",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "location",
+						"value": "shanghai",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "user=zhangsan; Path=/; Domain=nepxion; Expires=Fri, 07 Oct 2050 15:00:00 GMT;",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "trace-id",
+						"value": "c0zs78kcze5z",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "span-id",
+						"value": "1589",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "a",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "b",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:31000/springboot-discovery-test-service-a/invoke/gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31000",
+					"path": [
+						"springboot-discovery-test-service-a",
+						"invoke",
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A服务内省调用链路-local",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "n-d-version",
+						"value": "{\"springboot-discovery-test-service-a\":\"1.0\", \"springboot-discovery-test-service-b\":\"1.0\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-version-weight",
+						"value": "{\"springboot-discovery-test-service-a\":\"1.0=90;1.1=10\", \"springboot-discovery-test-service-b\":\"1.0=20;1.1=80\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-region",
+						"value": "{\"springboot-discovery-test-service-b\":\"local\", \"springboot-discovery-test-service-c\":\"local\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-region-weight",
+						"value": "dev=99;qa=1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-address",
+						"value": "{\"springboot-discovery-test-service-a\":\"13001\", \"springboot-discovery-test-service-b\":\"14001\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-env",
+						"value": "local",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-id-blacklist",
+						"value": "{\"springboot-discovery-test-service-a\":\"20210601-222830-466-1840-750-979\", \"springboot-discovery-test-service-b\":\"20210601-222830-501-4332-921-141\"}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "n-d-address-blacklist",
+						"value": "3*2;4001",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "app-version",
+						"value": "1.0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "mobile",
+						"value": "13312345678",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "user",
+						"value": "zhangsan",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "location",
+						"value": "shanghai",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "user=zhangsan; Path=/; Domain=nepxion; Expires=Fri, 07 Oct 2050 15:00:00 GMT;",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "trace-id",
+						"value": "c0zs78kcze5z",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "span-id",
+						"value": "1589",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "a",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "b",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:13001/invoke/gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "13001",
+					"path": [
+						"invoke",
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
