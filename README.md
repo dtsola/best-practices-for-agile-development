@@ -36,7 +36,7 @@
 
   具体实现方案如下图所示。
 
-  ![](images/1.jpg)
+  ![](https://pan.bilnn.cn/api/v3/file/sourcejump/bGE7zQsY/AUdB07hIeWBTyZRU5CbDd88rIN6-0DSO2vLQVBwWjBc*)
 
 ## 说明
 - 本文以开发环境为本地网络与 [docker-desktop](https://www.docker.com/products/docker-desktop/) +k8s 为例
@@ -48,16 +48,16 @@
 - jdk 1.8+（ jdk8u345-b01）
 - IntelliJ IDEA 2021.1.2 x64
 	- 需要安装插件docker以及Kubernetes（可选）
-![](images/2.jpg)
+![](https://pan.bilnn.com/api/v3/file/sourcejump/KPZJpWIQ/LZrdLRXxa-3auMeP8r4zugtLBVxIZAoynuKGy-PxDWw*)
 - [下载java代码](java)
 ## 步骤1：部署基线环境
 ### 打包镜像
 - 首先整个项目package生成jar包
 - 使用IDEA对项目中的Dockerfile文件进行打包 为1.0.0版本，比如：springboot-discovery-test-service-a:1.0.0
-![](images/4.jpg)
+![](https://pan.bilnn.cn/api/v3/file/sourcejump/QBpJ48Ub/lSLPvG74pyYWdGe1xwPUKMm735jyoHmfi_g_tN6JXRQ*)
 ### 推送镜像到镜像中心
 - 本文不推送镜像中心，直接放在本地
-![](images/3.jpg)
+![](https://pan.bilnn.cn/api/v3/file/sourcejump/YqE5gxIv/Ku8EMSj8ZuM7fRN2eooiCGlQoKZW49i9EMJQGbkU4po*)
 
 ### 创建dev命名空间
 - kubectl create namespace dev
@@ -68,9 +68,9 @@
 
 - 发现已正常部署
 
-  ![](images/5.jpg)
+  ![](https://pan.bilnn.cn/api/v3/file/sourcejump/XqEbgzFd/DMHhdITIxwIYa6CrJlmuojHaMKPGIEaDm2jfFtdcE-4*)
 
-  ![](images/6.jpg)
+  ![](https://pan.bilnn.com/api/v3/file/sourcejump/NKWJn4SW/6gfWu6wFiuX6gSxWtDyzHnveigHWQ0Rn2KIN8o4jzus*)
 
 ## 步骤2：连接到k8s的网络
 
@@ -78,7 +78,7 @@
 
 - 发现肯定是ping不通的
 
-![](images/7.jpg)
+![](https://pan.bilnn.com/api/v3/file/sourcejump/BoMJZbC2/63BuNGvlhKS4hpxBTVZ2NINXO8IppwL2aIXabnKw1n0*)
 
 ### 打通网络
 
@@ -88,7 +88,7 @@
 
 ### 再次ping地址
 - 发现已经通了
-![](images/8.jpg)
+![](https://pan.bilnn.cn/api/v3/file/sourcejump/3965Q7tD/p_iuo1O-dXF2hdbChUT-LGLtNIHwRc6o28qQzLbVv9M*)
 
 ## 步骤3：IDEA开发特性功能
 ### 规划
@@ -288,10 +288,12 @@ spring.application.strategy.region.transfer.enabled=true
 #### 调试-从网关开始调用
 
 - GET请求调用地址：http://localhost:31000/springboot-discovery-test-service-a/invoke/gateway
-
 - 添加请求头：n-d-version：{"springboot-discovery-test-service-a":"feature-1.1", "springboot-discovery-test-service-c":"feature-1.1"}
-
 - 返回值：gateway -> [ID=springboot-discovery-test-service-a][T=service][P=Nacos][H=10.1.1.110:13001][V=feature-1.1][R=dev][E=common][Z=zone1][G=springboot-discovery-test-group] -> [ID=springboot-discovery-test-service-b][T=service][P=Nacos][H=10.1.1.112:14001][V=1.0][R=dev][E=common][Z=zone1][G=springboot-discovery-test-group] -> [ID=springboot-discovery-test-service-c][T=service][P=Nacos][H=10.1.1.109:16001][V=feature-1.1][R=dev][E=common][Z=zone1][G=springboot-discovery-test-group]
-
 - 发现：A和C服务调用的是feature-1.1，C是基准环境1.0版本，验证成功
+
+## 联系我
+
+- E-Mail：dtsola@163.com
+- QQ：550182738
 
