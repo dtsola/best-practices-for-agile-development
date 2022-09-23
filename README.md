@@ -1,3 +1,8 @@
+## 联系我
+- E-Mail：dtsola@163.com
+- QQ：550182738
+
+
 ## 背景信息
 
 ### 遇到的问题
@@ -291,9 +296,4 @@ spring.application.strategy.region.transfer.enabled=true
 - 添加请求头：n-d-version：{"springboot-discovery-test-service-a":"feature-1.1", "springboot-discovery-test-service-c":"feature-1.1"}
 - 返回值：gateway -> [ID=springboot-discovery-test-service-a][T=service][P=Nacos][H=10.1.1.110:13001][V=feature-1.1][R=dev][E=common][Z=zone1][G=springboot-discovery-test-group] -> [ID=springboot-discovery-test-service-b][T=service][P=Nacos][H=10.1.1.112:14001][V=1.0][R=dev][E=common][Z=zone1][G=springboot-discovery-test-group] -> [ID=springboot-discovery-test-service-c][T=service][P=Nacos][H=10.1.1.109:16001][V=feature-1.1][R=dev][E=common][Z=zone1][G=springboot-discovery-test-group]
 - 发现：A和C服务调用的是feature-1.1，C是基准环境1.0版本，验证成功
-
-## 联系我
-
-- E-Mail：dtsola@163.com
-- QQ：550182738
 
