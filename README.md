@@ -54,7 +54,7 @@
 - IntelliJ IDEA 2021.1.2 x64
 	- 需要安装插件docker以及Kubernetes（可选）
 ![](https://pan.bilnn.com/api/v3/file/sourcejump/KPZJpWIQ/LZrdLRXxa-3auMeP8r4zugtLBVxIZAoynuKGy-PxDWw*)
-- [下载java代码](java)
+- [下载java代码](https://github.com/dtsola/springboot-discovery-test)
 ## 步骤1：部署基线环境
 ### 打包镜像
 - 首先整个项目package生成jar包
